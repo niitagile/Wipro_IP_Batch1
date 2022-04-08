@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<title> Registration form</title>
+</head>
+
+<body>
+
+<Center><h1> Registration Form</h1></center>
+<form name=regForm>
+
+<br><br><label for="name">*Enter your name</label>
+<input type="text"id="name" name="txtName" required>
+
+
+<br><br>Enter your age
+<input type="number" name="txtAge">
+
+<br><br>Enter your Date of Birth
+<input type="date" name="txtDob">
+
+<br><br>Enter your Place of Birth
+<select name="optPlace">
+<option>Delhi</option>
+<option>Mumbai</option>
+<option>Noida</option>
+<option>Banglore</option>
+</select>
+
+<br><br>Enter your Gender
+<input type="radio" name="rdoGender">Male
+<input type="radio" name="rdoGender">Female
+
+<br><br>Enter your emailid
+<input type="email" name="txtEmail" pattern="^[a-zA-Z0-9]+@gmail\.com$">
+
+<div>
+<br><br>Enter your hobbies
+<input type="checkbox" name="chkHobbies1">Dancing
+<input type="checkbox" name="chkHobbies2">Reading
+<input type="checkbox" name="chkHobbies3">Travelling
+<input type="checkbox" name="chkHobbies4">Singing
+<input type="checkbox" name="chkHobbies5">Gardening
+</div>
+<br><br>Enter your phoneno
+<input type="tel" name="txtPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+
+<br><br>Enter your description
+<textarea rows="3" cols="40" name="txtDescription" maxLength=400></textarea>
+
+<br><br>Upload your photo
+<input type="file" name="fileUpload">
+
+<br><br>
+<input type="submit">
+<input type="reset">
+</form>
+</body>
+
+</html>
+
