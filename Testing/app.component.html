@@ -1,0 +1,7 @@
+<router-outlet></router-outlet>
+<div style="text-align:center">
+  <h1>
+     {{ msg }}!
+  </h1>
+  <app-title-change message="Enter a new title" (changeTitleEvent)="changeTitle($event)"></app-title-change>
+</div>
