@@ -1,0 +1,203 @@
+Collections - is a framework to implement data structure
+all classes are generics.
+They use only object
+
+import java.util.ArrayList;
+ArrayList ls=new ArrayList();//defaultly it adds all data in object format
+ls.add(1);
+ls.add("Heena");
+ls.add(student);
+(Integer)ls.get(0)+67;
+
+ArrayList<String>ls=new ArrayList<>();
+ls.add(778);//error
+
+
+class Addition<T>{
+T a,b;
+Addition(T a, T b){
+	this.a=a;
+	this.b=b;	
+}
+T addition(){
+return a+b;
+}
+}
+
+Addition<Float> obj=new Addition<>(5.6f,6.7f);
+int a=obj.addition();
+Addition<String> obj=new Addition<>("abc","def");
+String a=obj.addition();
+
+
+
+class Addition{
+float a,b;
+Addition(float a, float b){
+	this.a=a;
+	this.b=b;	
+}
+float addition(){
+return a+b;
+}
+}
+
+Addition obj=new Addition(4.5f, 7.8f);
+Addition obj =new Addition("abc", "gef");
+
+
+Generics
+
+class Test{
+
+	public static void main(){
+	ArrayList alist=new ArrayList();
+	alist.add(1);//error
+	alist.add("Hello");
+	alist.get(1);
+	
+	
+	
+	}
+
+}
+
+
+
+
+8 Wraaper calsses-- jdk1.5
+Wrapper classes are final classes
+primitive data types store in stack
+wrapper class object--heap
+byte-- Byte
+short-- Short
+int -- Integer
+long-- Long
+
+float-- Float
+double -- Double
+
+boolean-- Boolean
+char- character
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Collections-- framework-- data structure, generic classes
+Iterator
+Collections -- interface add() remove() set() isEmpty()..
+	List interface(insertion order)
+	-classes
+		ArrayList()
+		LinkedList
+		Vector
+			-stack (LIFO)	
+	Queue (FIFO)
+		PriortyQueue
+		ArrayDeque (Deque+LinkedList)
+	Set (Unique values)
+		HashSet 
+		LinkedHashSet
+		TreeSet(SortedSet interface)
+		EnumSet
+Array/ArrayList/Vector--
+	array is having fixed length
+	int arr[]=new int[10];
+	arr[]=new int[20];
+	arraylist can be extended at run time
+	Vector is legacy class
+	arrayList increase its size more than half,not synchronized
+	vector increases its size double, synchronize
+arraylist/linkedlist
+	arraylist is good for traversing
+	linkedlist is good for insertion and deletion
+
+collections store only objects not primitive data types
+
+
+generic type
+class Test{
+	int a,b;
+	Test(int a, int b){
+		this.a=a;
+		this.b=b;
+	}
+	int addition(){
+	return a+b;
+	}
+
+}
+
+Test t=new Test(5,6);
+System.out.println(t.addition());-->11
+
+
+Test t=new Test(5.8,6.7);//Error
+System.out.println(t.addition());
+
+class Test{
+	double a,b;
+	Test(double a, double b){
+		this.a=a;
+		this.b=b;
+	}
+	double addition(){
+	return a+b;
+	}
+
+}
+**************************
+A generic class
+class Test<T>{
+	T a,b;
+	Test(T a, T b){
+		this.a=a;
+		this.b=b;
+	}
+	T addition(){
+	return a+b;
+	}
+
+}
+
+Test<Double> t=new Test<>(5.8,6.7);
+System.out.println(t.addition());
+
+
+Test<Integer> t=new Test<>(5,6);
+System.out.println(t.addition());
+Test<int> t=new Test<>(5,6);//error
+***************************************************************
+		Wrapper Classes -- jdk 1.5-- they are used to convert one object to primitive data type and vice a versa
+		
+boolean -- Boolean
+byte -- Byte
+char -- Character
+short-- Short
+int -- Integer
+long -- Long
+float -- Float
+double -- Double
+
+Integer a=78;// autoboxing
+int c=a;//unboxing
+		
+
+Map- <key,value>
+HashMap
+LinkedHashMap
+
+to fetch key-- keySet()
+
+
+		

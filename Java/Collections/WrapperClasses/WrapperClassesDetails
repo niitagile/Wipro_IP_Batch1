@@ -1,0 +1,43 @@
+Wrapper Classes-- introduce in jdk1.5
+primitive data -- stack
+primitive to object
+object to primitive
+Wrapper classes
+Primitive Type	Wrapper class
+boolean	Boolean
+char	Character
+byte	Byte
+short	Short
+int	Integer
+long	Long
+float	Float
+double	Double
+
+int a=8;
+int b=a;//b=8
+
+Integer obj=new Integer(3);
+int a=obj.intValue();//a=3 unboxing--> object to pritive type
+int a=obj;
+
+Integer obj=67;
+int a=obj;//unboxing
+or
+int a=obj.intValue();//compiler
+
+int a=78;
+Integer obj=Integer.valueOf(a); //autoboxing
+or
+Interger obj=a;
+
+
+String str="123";
+str=str+6;//1236
+int ans=Integer.parseInt(str)+6;//129
+
+Character-- toUpperCase(), isDigit()....
+
+
+javac Student.java
+
+java Student 67 89
