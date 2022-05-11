@@ -12,6 +12,7 @@ public class SyncArrayList {
 			
 			alist.add("Hello");
 			
+			
 	}
 
 }
