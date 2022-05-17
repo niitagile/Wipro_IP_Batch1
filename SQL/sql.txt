@@ -1,0 +1,45 @@
+select department_id, department_name, rollno, name from departments cross join students;
+select department_id, department_name, rollno, name from departments,students;
+select department_id, department_name, employee_id, first_name from employees natural join departments;
+
+select department_id, department_name, employee_id, first_name from employees join departments using(department_id);
+
+alter table stud_results rename column rollno to rno;
+
+ select rollno, name, month, marks from students join stud_results on rollno=rno;
+
+select employee_id,department_name, city from employees join departments using(department_id) join locations using(location_id);
+
+select employee_id,department_name, city from employees e join departments d on (e.department_id=d.department_id) join locations loc on (d.location_id=loc.location_id);
+
+select emp.first_name "Employee_name" ,mgr.first_name "Manager_name" from employees emp join employees mgr on emp.manager_id=mgr.employee_id;
+
+ SQL> select rollno, name,marks from demo1 join demo2 using(rollno);
+
+    ROLLNO NAME                      MARKS
+---------- -------------------- ----------
+         4 Manik                        23
+
+SQL> select rollno, name,marks from demo1 left outer join demo2 using(rollno);
+
+    ROLLNO NAME                      MARKS
+---------- -------------------- ----------
+         4 Manik                        23
+         1 Anil
+         2 Anik
+
+SQL> select rollno, name,marks from demo1 right outer join demo2 using(rollno);
+
+    ROLLNO NAME                      MARKS
+---------- -------------------- ----------
+         4 Manik                        23
+         3                              12
+
+SQL> select rollno, name,marks from demo1 full outer join demo2 using(rollno);
+
+    ROLLNO NAME                      MARKS
+---------- -------------------- ----------
+         1 Anil
+         2 Anik
+         4 Manik                        23
+         3                              12
