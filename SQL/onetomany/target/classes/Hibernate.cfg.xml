@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+       
+       
+        <property name="format_sql">false</property>
+
+        
+     <property name="connection.url">jdbc:mysql://localhost:3306/cred</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Comnet@123</property>
+		
+		<!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">5</property>
+
+       <property name="hbm2ddl.auto">create</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        
+     
+
+	<mapping class="com.virtusa.beans.Question"/>
+	<mapping class="com.virtusa.beans.Answer"/>
+
+
+       
+    </session-factory>
+</hibernate-configuration>
