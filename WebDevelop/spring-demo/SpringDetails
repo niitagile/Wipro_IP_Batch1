@@ -1,0 +1,83 @@
+Spring - light weight framework
+framework of frameworks
+
+IOC - Inverse of Controller-- Dependency Injection(at run time you are refer object of a class inside another class as component)
+
+Spring Container -- the container will create the objects, wire them with properties, configure them, manage life cycle
+
+containers gets instructions - which object to instatiate,configure through metadata
+metadata-- XML file, Java Code, Java annotations
+
+
+java Pojo classes +metadata--> Spring Container---> provide beans to application
+
+
+2 types of containers
+BeanFactory
+ApplicationContext-- advance container which gives all facility of BeanFactory
+
+To implements ApplicationContext 3 ways
+
+ClassPathXmlApplicationContext - fetch xml file from class path
+FileSystemXmlApplicationContext - here we have to mention complete pysical path of xml file
+ApplicationContext context=new FileSystemXmlApplicationContext("E:\workspace2\spring-demo\src\application.xml");
+
+WebXmlApplicationContext-- with in web application
+
+Bean definition - contains the information called configuration metadata 
+-- how to create bean
+lifecycle details
+bean's dependecies
+
+class, name, scope, construtor-arg, properties
+autowiring mode, initization method, destroy
+
+a simple bean
+<bean id="" class="">
+<properties>
+</bean>
+
+intialization method
+<bean id="" class="" init-method="">
+
+lazy - initalization
+<bean id="" class="" lazy-init="true">
+
+destroy method
+<bean id="" class="" destroy-method="">
+
+
+
+Scopes of beans
+singleton-- a single instance per Spring IoC container 
+prototype -- a single bean definition -- any number of objects
+request -- realted to HTTP request. only valid in the context of web-aware Spring ApplicationContext
+session- Http Session
+global-session - HTTP Session
+
+<bean id="" class="" scope="">
+
+
+
+DI- Dependency injection-- give refernce of any object according to requirement
+2 ways
+construtor-arg
+setters
+
+
+
+Autowiring is another way of DI. Its internally uses setter or constructor injection
+it reduces the code
+different modes of autowiring
+no- default
+byName - poperty name and bean name similar
+byType - type not according to name. it internally calls setters
+constructor
+autodetect - first type to do autowiring by constructor, byType-- depricated since Spring3
+
+
+
+
+<context:annotation-config/>
+http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd
