@@ -1,0 +1,39 @@
+
+org.springframework.DAO--- jar
+
+
+
+1) create table student(id number(4)not null,name varchar(20) not null,age number(3)not null);
+CREATE TABLE Student(
+   ID   INT NOT NULL,
+   NAME VARCHAR(20) NOT NULL,
+   AGE  INT NOT NULL
+   )
+   
+  2)  put mysql or orcale jar file in your project and add it on build in path
+  3) open your bean.xml
+  Write down driver and url according to your database driver,url, username, password
+  
+  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+   <property name="driverClassName" value="oracle.jdbc.driver.OracleDrive"/>
+   <property name="url" value="jdbc:odbc:"/>
+   <property name="username" value="hr"/>
+   <property name="password" value="hr"/>
+    </bean>
+    
+    
+    
+    create or replace function getRecord(v_id in number, v_name out varchar, v_age out number)
+    as
+    select name, age into v_name,v_age from student where id=v_id;
+    end;
+    /
+    
+    addValue(34)
+    print name, age
+    
+    
+    Map<String, Object> out = jdbcCall.execute(in);
+    
+    name,"leela"
+    age,67
