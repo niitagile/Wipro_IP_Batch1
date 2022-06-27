@@ -1,0 +1,4 @@
+File --> New --> Spring Starter
+Dependencies--> Spring Web, H2 Database, Spring Data JPA
+PersonController, PersonEntity,PersonResponse,PeronService--> class
+PersonRepository--> interface
